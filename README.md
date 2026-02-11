@@ -15,13 +15,13 @@ FILE_FILTER_UTIL - утилита предназначена для обрабо
 1. Создать jar файл
 
 ``` bash
- .\gradlew clean build 
+.\gradlew clean build 
  ```
 
 1. Передать требуемые файлы для анализа
 
 ``` bash
- java -jar build/libs/file_filter_content_util.jar -s -a -p sample- example_text/exampleText1.txt example_text/exampleText2.txt
+ java -jar build/libs/file_filter_util.jar -s -a -p sample- example_text/exampleText1.txt example_text/exampleText2.txt
  ```
 
 1. На выходе до 3 файлов (`integers.txt` `floats.txt` `strings.txt`). Файлы создаются при условии что будут не пустыми.
