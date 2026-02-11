@@ -87,6 +87,9 @@ public class FileFilterUtil {
     }
 
     private static void printStats(Stats stats, boolean shortStats) {
+        if (stats.intCount == 0 && stats.floatCount == 0 && stats.stringCount == 0) {
+            return;
+        }
         log.info("Статистика — shortStats= {}", shortStats);
         log.info(" integers: {}, floats: {}, strings: {}", stats.intCount, stats.floatCount, stats.stringCount);
 
@@ -102,7 +105,7 @@ public class FileFilterUtil {
 
         if (stats.floatCount > 0) {
             double avg = stats.floatSum / stats.floatCount;
-            log.info("Float  stats: count={}, min={}, max={}, sum={}, avg={}",
+            log.info("Float stats: count={}, min={}, max={}, sum={}, avg={}",
                     stats.floatCount, stats.floatMin, stats.floatMax, stats.floatSum, avg);
         }
 
