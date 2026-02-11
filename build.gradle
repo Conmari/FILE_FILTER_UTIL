@@ -35,6 +35,17 @@ application {
     mainClass = 'scari.corp.FileFilterUtil'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'scari.corp.FileFilterUtil'
+        )
+    }
+    from(configurations.runtimeClasspath.collect { zipTree(it) }) {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
