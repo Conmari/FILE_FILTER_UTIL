@@ -75,6 +75,8 @@ public class FileProcessor {
         BufferedWriter floatWriter = null;
         BufferedWriter stringWriter = null;
 
+        int processedFiles = 0;
+
         try {
 
             for (String filePath : inputFiles) {
@@ -110,6 +112,7 @@ public class FileProcessor {
                                 handleString(stringWriter, line, stats);
                             }
                         }
+                        processedFiles++;
                     }
                 }
             }
@@ -134,6 +137,10 @@ public class FileProcessor {
                 }
             } catch (IOException ignored) {
             }
+        }
+
+        if (processedFiles == 0) {
+            log.warn("Не удалось обработать ни одного входного файла");
         }
         return stats;
     }
