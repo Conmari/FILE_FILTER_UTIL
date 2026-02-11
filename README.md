@@ -18,13 +18,13 @@ FILE_FILTER_UTIL - утилита предназначена для обрабо
 .\gradlew clean build 
  ```
 
-1. Передать требуемые файлы для анализа
+2. Передать требуемые файлы для анализа
 
 ``` bash
  java -jar build/libs/file_filter_util.jar -s -a -p sample- example_text/exampleText1.txt example_text/exampleText2.txt
  ```
 
-1. На выходе до 3 файлов (`integers.txt` `floats.txt` `strings.txt`). Файлы создаются при условии что будут не пустыми.
+3. На выходе до 3 файлов (`integers.txt` `floats.txt` `strings.txt`). Файлы создаются при условии что будут не пустыми.
 
 ## Возможные флаги запуска <a id="flags"></a>
 
@@ -45,7 +45,10 @@ FILE_FILTER_UTIL - утилита предназначена для обрабо
   * slf4j-api version 2.0.17
   * slf4j-simple version 2.0.17
 
-Пример работы утилиты запуск с флагом `-s`
+Пример работы утилиты:
+* Запуск с флагом `-s`
+<img width="2133" height="166" alt="img_1" src="https://github.com/user-attachments/assets/7a376b6f-8883-4df8-bcbd-7efdf9150b9f" />
 
-Пример работы утилиты запуск с флагом `-f`
+* Запуск с флагом `-f`
+<img width="2127" height="246" alt="image" src="https://github.com/user-attachments/assets/076022b1-defa-4f3a-8aa6-d1c8d37ae280" />
 
